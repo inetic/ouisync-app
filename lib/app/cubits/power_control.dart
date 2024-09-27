@@ -220,7 +220,7 @@ class PowerControl extends Cubit<PowerControlState> with AppLogger {
   }
 
   Future<void> _updateNetworkMode(PowerControlState newState) async {
-    final oldState = newState;
+    final oldState = state.copyWith();
     emit(newState);
 
     if (oldState.networkMode == newState.networkMode) {
