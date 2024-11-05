@@ -68,10 +68,11 @@ class _QRScannerState extends State<QRScanner> with AppLogger {
 
     return MobileScanner(
         controller: cameraController,
-        onDetect: (capture) async {
+        onDetect: (BarcodeCapture capture) async {
           String? code;
-          if ((capture.raw as List?)?.isNotEmpty ?? false) {
-            code = (capture.raw as List?)?[0]['rawValue'];
+          final barcodes = capture.barcodes;
+          if (barcodes.isNotEmpty) {
+            code = barcodes[0].rawValue;
           }
 
           if (code == null) {
