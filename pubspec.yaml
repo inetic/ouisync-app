@@ -68,8 +68,8 @@ dependencies:
   local_auth: ^2.3.0
   locale_names: ^1.1.1
   loggy: ^2.0.1+1
-  meta: ^1.10.0
-  mime: ^1.0.6
+  meta: ^1.15.0
+  mime: ^2.0.0
   mobile_scanner: ^5.2.1
   # move_to_background: ^1.0.2
   # - Upgrade Gradle to 8.5.2, minSdk=21, targetSdk and compileSdk to 34;
