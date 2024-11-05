@@ -9,8 +9,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   local_auth_windows
   ouisync
   permission_handler_windows
-  screen_retriever
-  sentry_flutter
+  screen_retriever_windows
   share_plus
   system_tray
   url_launcher_windows
@@ -19,6 +18,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
+  sentry_flutter
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)
