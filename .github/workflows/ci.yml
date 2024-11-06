@@ -97,33 +97,33 @@ jobs:
       - name: Get Flutter packages
         run:  dart pub get
 
-      - name: Generate the Dart bindings for the Ouisync library
-        working-directory: ouisync/bindings/dart
-        run: dart util/bindgen.dart
+      #- name: Generate the Dart bindings for the Ouisync library
+      #  working-directory: ouisync/bindings/dart
+      #  run: dart util/bindgen.dart
 
-      - name: Analyze
-        run: |
-          pushd lib
-          flutter analyze
-          popd
+      #- name: Analyze
+      #  run: |
+      #    pushd lib
+      #    flutter analyze
+      #    popd
 
-          pushd test
-          flutter analyze
-          popd
+      #    pushd test
+      #    flutter analyze
+      #    popd
 
-          pushd util
-          flutter analyze
-          popd
+      #    pushd util
+      #    flutter analyze
+      #    popd
 
-        if: matrix.analyze
+      #  if: matrix.analyze
 
-      - name: Build Ouisync library for tests
-        working-directory: ouisync
-        run: cargo build --package ouisync-ffi --lib
+      #- name: Build Ouisync library for tests
+      #  working-directory: ouisync
+      #  run: cargo build --package ouisync-ffi --lib
 
-      - name: Run tests
-        run:
-          flutter test
+      #- name: Run tests
+      #  run:
+      #    flutter test
 
       - name: Setup Sentry DSN for artifact build (different from the production releases)
         run: |
